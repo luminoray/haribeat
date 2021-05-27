@@ -1,0 +1,48 @@
+html {
+    height: 100%;
+}
+body {
+    background: #222;
+    color: #FFF;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+    margin: 0;
+}
+a, a:visited, a:active {
+    color: #0FF;
+}
+h1 {
+    font-size: 4rem;
+    margin: 0;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+footer {
+    font-size: 0.8rem;
+    margin: 10px 20px;
+}
+.fa-eye {
+    display: inline-block;
+    width: 72px;
+}
+#play-button {
+    width: 160px;
+    height: 160px;
+    font-size: 10rem;
+    line-height: 10rem;
+    border: none;
+    background: none;
+    color: #FFF;
+    padding: 0;
+}
+#play-button:disabled {
+    color: #F00;
+}
