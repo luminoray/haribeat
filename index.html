@@ -5,13 +5,20 @@
     <title>ASMR Heartbeat Generator - Haribeat</title>
     <script src="https://kit.fontawesome.com/3e9535534d.js" crossorigin="anonymous"></script>
     <script src="./heartbeat.js" type="application/javascript"></script>
-    <link href="style.css" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet">
 </head>
 <body>
 <main>
     <h1><i class="fas fa-eye"></i> HariBeat</h1>
     <div id="audio-container"></div>
     <button id="play-button"><i class="fas fa-heart"></i></button>
+    <form id="controls">
+        <div>
+            <label for="bpm">BPM</label>
+            <output id="bpm-display" for="bpm"></output>
+        </div>
+        <input id="bpm" type="range" min="60" max="90" value="75">
+    </form>
 </main>
 <footer>
     <p>Inspired by <a href="https://twitter.com/HariRyu2434" target="_blank">@HariRyu2434</a> and sampled from <a href="https://www.youtube.com/watch?v=Ou1wACAwKVM">[ASMR] yo</a></p>
