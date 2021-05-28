@@ -6,10 +6,16 @@ document.addEventListener("DOMContentLoaded", function() {
             rng++;
         }
         let name = 'heartbeat-' + ((rng <= 9) ? '0' : '') + rng;
+        let bpm = document.getElementById('bpm').value;
         document.getElementById(name).play();
         setTimeout(function () {
             playAudio(rng)
-        }, 800);
+        }, (60/bpm) * 1000);
+    }
+
+    const updateMeters = function() {
+        let bpmDisplay = document.getElementById('bpm-display');
+        bpmDisplay.value = document.getElementById('bpm').value;
     }
 
     // Iterate and append all audio files.
@@ -33,4 +39,10 @@ document.addEventListener("DOMContentLoaded", function() {
             this.setAttribute('disabled', '');
         }
     }
+
+    document.getElementById('controls').oninput = function () {
+        updateMeters();
+    }
+
+    updateMeters();
 });
